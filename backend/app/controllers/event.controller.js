@@ -13,6 +13,7 @@ export const getEventsList = CatchAsyncError(async (req, res, next) => {
 
 export const getEventDetails = CatchAsyncError(async (req, res, next) => {
   const { id } = req.params;
+
   if (!id)
     throw new APIError(
       HttpStatus.INVALID_REQUEST,
