@@ -1,0 +1,48 @@
+main h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.events-container {
+  width: 100%;
+  margin-top: 1.6em;
+  padding: 2rem;
+}
+
+.event-cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.event-details {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 0.4rem;
+}
+
+.event-details p {
+  flex: 1;
+}
+.event-details:nth-child(1) {
+  background-color: #f9f9f9;
+}
+
+.event-details:nth-child(1) p,
+.event-details:nth-child(1) a {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+a.view-details {
+  color: #fff;
+  background-color: rgb(81, 167, 216);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+  transition: background 0.3s ease-in-out;
+}
+.view-details:hover {
+  background: #218838;
+}

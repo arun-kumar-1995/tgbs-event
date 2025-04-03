@@ -33,19 +33,32 @@ const Event = () => {
     <main>
       {isLoading && <p>Loading...</p>}
 
+      <h2>Events</h2>
       {!isLoading && events.length > 0 && (
-        <div className="event-container">
-          {events.map((event) => {
-            const date = formatDate(event.event_date);
+        <div className="events-container">
+          <div className="event-cards">
+            <div className="event-details">
+              <p>Event Title</p>
+              <p>Event Date</p>
+              <Link to="#">Details</Link>
+            </div>
 
-            return (
-              <div key={event.id} className="event-card">
-                <h2>{event.title}</h2>
-                <p>{date}</p>
-                <Link to={`/event-detail/${event.id}`}>View Details</Link>
-              </div>
-            );
-          })}
+            {events.map((event) => {
+              const date = formatDate(event.event_date);
+              return (
+                <div className="event-details" key={event.id}>
+                  <p>{event.title}</p>
+                  <p>{date}</p>
+                  <Link
+                    to={`/event-detail/${event.id}`}
+                    className="view-details"
+                  >
+                    View Details
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
     </main>
