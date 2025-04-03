@@ -22,7 +22,6 @@ class EventService {
   }
 
   async getEventDetails(id) {
-    console.log(id, typeof id);
     const data = await this.#readJsonFile();
     if (!data) return null;
     return data.find((event) => event.id.toString() === id) || null;
